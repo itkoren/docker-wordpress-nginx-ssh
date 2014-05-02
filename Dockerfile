@@ -32,7 +32,7 @@ RUN find /etc/php5/cli/conf.d/ -name "*.ini" -exec sed -i -re 's/^(\s*)#(.*)/\1;
 ADD ./nginx-site.conf /etc/nginx/sites-available/default
 
 # Supervisor Config
-RUN /usr/bin/easy_install supervisor
+RUN /usr/bin/easy_install supervisor-stdout
 ADD ./supervisord.conf /etc/supervisord.conf
 
 #Add system user for Wordpress
